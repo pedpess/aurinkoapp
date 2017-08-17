@@ -11,11 +11,11 @@ import android.widget.TextView
 class ForecastListAdapter(val items: List<String>) : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        return ViewHolder(TextView(parent.context))
+        return ViewHolder(TextView(parent?.context))
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder.textView.text= items[position]
+        holder?.textView?.text = items[position]
     }
 
     override fun getItemCount(): Int = items.size
