@@ -1,6 +1,7 @@
 package com.ppes.aurinkoapp.data
 
 import com.google.gson.Gson
+import java.net.URL
 
 /**
  * Created by ppes on 19/08/2017.
