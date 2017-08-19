@@ -40,6 +40,9 @@ dependencies {
     // Kotlin Utils
     implementation "org.jetbrains.anko:anko-common:$anko_version"
 
+    // Network
+    implementation "com.google.code.gson:gson:$gson_version"
+
     // Tests
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
