@@ -1,4 +1,4 @@
-package com.ppes.aurinkoapp.network
+package com.ppes.aurinkoapp.data
 
 import android.util.Log
 import java.net.URL
