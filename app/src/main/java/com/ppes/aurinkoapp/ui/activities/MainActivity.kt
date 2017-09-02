@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.ppes.aurinkoapp.R
 import com.ppes.aurinkoapp.domain.commands.RequestForecastCommander
-import com.ppes.aurinkoapp.domain.model.Forecast
 import com.ppes.aurinkoapp.ui.adapters.ForecastListAdapter
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.find
@@ -25,12 +24,8 @@ class MainActivity : AppCompatActivity() {
         doAsync {
             val result = RequestForecastCommander("94043").execute()
             uiThread {
-                forecastList.adapter = ForecastListAdapter(result,
-                        object : ForecastListAdapter.OnItemClickListener {
-                            override fun invoke(forecast: Forecast) {
-                                toast(forecast.date)
-                            }
-                        })
+                val adapter = ForecastListAdapter(result) { toast(it.date) }
+                forecastList.adapter = adapter
             }
         }
     }
