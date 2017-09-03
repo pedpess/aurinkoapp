@@ -38,6 +38,7 @@ dependencies {
 
     // Kotlin Utils
     compile "org.jetbrains.anko:anko-common:$anko_version"
+    compile "org.jetbrains.anko:anko-sqlite:$anko_version"
 
     // Network
     compile "com.google.code.gson:gson:$gson_version"
